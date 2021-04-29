@@ -1,6 +1,12 @@
+/* eslint-disable import/no-mutable-exports */
 import { Store } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
+import Photos from '@/store/photos'
 
-function initializeStore(store: Store<any>): void {}
+let photos: Photos
 
-export { initializeStore }
+function initializeStore(store: Store<any>): void {
+  photos = getModule(Photos, store)
+}
+
+export { initializeStore, photos }

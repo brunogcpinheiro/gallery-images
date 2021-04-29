@@ -1,5 +1,5 @@
 <template>
-  <VApp dark>
+  <VApp>
     <Nuxt />
   </VApp>
 </template>
