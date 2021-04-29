@@ -1,3 +1,5 @@
 <template>
-  <v-app dark />
+  <VApp dark>
+    <Nuxt />
+  </VApp>
 </template>

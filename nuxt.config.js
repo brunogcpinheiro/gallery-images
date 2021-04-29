@@ -3,10 +3,10 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - gallery-images',
-    title: 'gallery-images',
+    titleTemplate: 'galeria-de-imagens',
+    title: 'Galeria de Imagens',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-BR',
     },
     meta: [
       { charset: 'utf-8' },
@@ -20,7 +20,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['@/plugins/accessor'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -37,10 +37,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'cookie-universal-nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://picsum.photos',
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
